@@ -89,7 +89,7 @@ try:
                 'Column': df.dtypes.index,
                 'Data Type': df.dtypes.values.astype(str)
             })
-            st.dataframe(dtypes_df, use_container_width=True, hide_index=True)
+            st.dataframe(dtypes_df, use_container_width=True)
         
         with col2:
             st.write("**Missing Values:**")
@@ -98,7 +98,7 @@ try:
                 'Missing Count': df.isnull().sum().values,
                 'Missing %': (df.isnull().sum().values / len(df) * 100).round(2)
             })
-            st.dataframe(missing_df, use_container_width=True, hide_index=True)
+            st.dataframe(missing_df, use_container_width=True)
             
             if df.isnull().sum().sum() == 0:
                 st.success("✅ No missing values found!")
@@ -127,7 +127,7 @@ try:
                             'Value': value_counts.index,
                             'Count': value_counts.values,
                             'Percentage': (value_counts.values / len(df) * 100).round(2)
-                        }), hide_index=True)
+                        }))
                     with col2:
                         fig = px.pie(values=value_counts.values, names=value_counts.index, 
                                    title=f"{col} Distribution")
