@@ -5,6 +5,10 @@ matplotlib
 seaborn
 streamlit
 plotly>=5.0
+altair<5
+openpyxl
+
+
 
 
 
