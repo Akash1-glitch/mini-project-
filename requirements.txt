@@ -7,3 +7,4 @@ streamlit
 plotly>=5.0
 
 
+
