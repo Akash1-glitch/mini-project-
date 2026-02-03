@@ -32,7 +32,7 @@ st.markdown("""
 # Load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('superstore data.csv')
+    df = pd.read_csv('superstore data(2).csv')
     return df
 
 # Main title
@@ -588,3 +588,4 @@ st.markdown("""
         <p>Built with Streamlit 🎈 | Superstore Analytics Dashboard</p>
     </div>
     """, unsafe_allow_html=True)
+
